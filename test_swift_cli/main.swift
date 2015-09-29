@@ -23,6 +23,7 @@ while let arg = arguments.next() {
             valB = Int(valBarg!)!
             print("Setting \(valBarg)")
         default:
+            print("Argument \(arg) not processed")
             continue;
     }
 }
