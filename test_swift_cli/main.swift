@@ -11,7 +11,7 @@ import Foundation
 // Create a generator from Process.arguments, so that we can use it 
 // inside the `while` loop, for obtaining the next argument for flags
 // that provide a value
-var arguments = Process.arguments.generate()
+var arguments = CommandLine.arguments.makeIterator()
 
 // We will use flagA as a flip-flop flag, and valB as an integer value
 var flagA = false
@@ -45,7 +45,7 @@ while let arg = arguments.next() {
 }
 
 // List all arguments (including the tool path, which will be the first argument)
-for pArg in Process.arguments {
+for pArg in CommandLine.arguments {
     print(pArg)
 }
 
