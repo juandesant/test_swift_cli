@@ -35,7 +35,7 @@ while let arg = arguments.next() {
             print("Getting value for -b")
             let valBarg = arguments.next()
             valB = Int(valBarg!)!
-            print("Setting \(valBarg)")
+            print("Setting \(String(describing: valBarg))")
         default:
             // We hit this case for non understandable values
             // We could choose to exit instead.
